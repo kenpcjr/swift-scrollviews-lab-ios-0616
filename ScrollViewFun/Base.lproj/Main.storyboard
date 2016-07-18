@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +17,55 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KaL-5D-7TG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YWF-yr-J3i">
+                                        <rect key="frame" x="0.0" y="0.0" width="1875" height="667"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Anger" translatesAutoresizingMaskIntoConstraints="NO" id="QVY-Wu-59b">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Disgust" translatesAutoresizingMaskIntoConstraints="NO" id="g4J-Y2-41Q">
+                                                <rect key="frame" x="375" y="0.0" width="375" height="667"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fear" translatesAutoresizingMaskIntoConstraints="NO" id="x7F-dY-n4n">
+                                                <rect key="frame" x="750" y="0.0" width="375" height="667"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Joy" translatesAutoresizingMaskIntoConstraints="NO" id="7RQ-Wa-nsI">
+                                                <rect key="frame" x="1125" y="0.0" width="375" height="667"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sadness" translatesAutoresizingMaskIntoConstraints="NO" id="LJl-aO-owI">
+                                                <rect key="frame" x="1500" y="0.0" width="375" height="667"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="LJl-aO-owI" firstAttribute="width" secondItem="QVY-Wu-59b" secondAttribute="width" id="G4q-dn-OjN"/>
+                                            <constraint firstItem="g4J-Y2-41Q" firstAttribute="width" secondItem="QVY-Wu-59b" secondAttribute="width" id="YbC-3V-yg3"/>
+                                            <constraint firstItem="x7F-dY-n4n" firstAttribute="width" secondItem="QVY-Wu-59b" secondAttribute="width" id="f2S-gN-llJ"/>
+                                            <constraint firstItem="7RQ-Wa-nsI" firstAttribute="width" secondItem="QVY-Wu-59b" secondAttribute="width" id="oJU-yS-Ghr"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="YWF-yr-J3i" firstAttribute="height" secondItem="KaL-5D-7TG" secondAttribute="height" id="2WF-Sn-unK"/>
+                                    <constraint firstItem="YWF-yr-J3i" firstAttribute="top" secondItem="KaL-5D-7TG" secondAttribute="top" id="6h8-DG-CRr"/>
+                                    <constraint firstAttribute="trailing" secondItem="YWF-yr-J3i" secondAttribute="trailing" id="Fmn-7Z-RVi"/>
+                                    <constraint firstItem="YWF-yr-J3i" firstAttribute="leading" secondItem="KaL-5D-7TG" secondAttribute="leading" id="LpX-rx-A2N"/>
+                                    <constraint firstAttribute="bottom" secondItem="YWF-yr-J3i" secondAttribute="bottom" id="ao9-Nl-ttI"/>
+                                    <constraint firstItem="YWF-yr-J3i" firstAttribute="width" secondItem="KaL-5D-7TG" secondAttribute="width" multiplier="5" id="baW-az-zVz"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KaL-5D-7TG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Bbn-k3-qgC"/>
+                            <constraint firstItem="QVY-Wu-59b" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="jFO-Nh-6YE"/>
+                            <constraint firstItem="KaL-5D-7TG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="muX-DO-GkM"/>
+                            <constraint firstItem="KaL-5D-7TG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="t5X-b3-hmR"/>
+                            <constraint firstItem="KaL-5D-7TG" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="vNB-Sr-ZHn"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
@@ -25,4 +74,11 @@
             <point key="canvasLocation" x="281.5" y="396.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Anger" width="412" height="634"/>
+        <image name="Disgust" width="414" height="630"/>
+        <image name="Fear" width="416" height="634"/>
+        <image name="Joy" width="406" height="636"/>
+        <image name="Sadness" width="406" height="636"/>
+    </resources>
 </document>
